@@ -1,0 +1,7 @@
+---
+- name: Common program installation
+  hosts: localhost
+  remote_user: elia
+  become: yes
+  roles:
+    - common

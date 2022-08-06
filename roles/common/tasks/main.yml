@@ -1,0 +1,46 @@
+---
+- name: Update install
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+    update_cache: yes
+
+- name: Install common programs
+  ansible.builtin.dnf:
+    name:
+      - terminator
+      - git
+      - neovim
+      - ranger
+      - podman
+      - htop
+      - ansible
+      - nmap
+      - nmap-ncat
+      - screen
+      - chromium
+      - clementine
+      - john
+      - hashcat
+      - flatpak
+      - util-linux-user
+      - curl
+      - zsh
+    state: present
+
+- name: Install Steam
+  ansible.builtin.dnf:
+    name: steam
+    state: latest
+    update_cache: yes
+
+- name: Add flathub source
+  community.general.flatpak_remote:
+    name: flathub
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    state: present
+
+- name: Install Flatpaks
+  community.general.flatpak:
+    name: com.discordapp.Discord
+    state: present
