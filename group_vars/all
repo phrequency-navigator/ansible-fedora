@@ -1,9 +1,8 @@
 release_ver: "41"
 core_ver: "fc41"
 
-username: "" #MY SUDO USER HERE
-
-dnf_packages:
+### List of DNF packages to install
+dnf_installs:
   - rhythmbox
   - terminator
   - git
@@ -15,11 +14,20 @@ dnf_packages:
   - flatpak
   - util-linux-user
   - curl
+  - wget
   - zsh
 
+### List of DNF packages to remove (we remove firefox to avoid duplicates as we install the flatpak)
+dnf_removes:
+  - firefox
+
+
+### Flatpak sources to install
 flatpak_remotes:
   - { name: "flathub", url: "https://dl.flathub.org/repo/flathub.flatpakrepo"}
 
+
+### Flatpak packages to install
 flatpaks:
   - { remote: "flathub", package: "com.discordapp.Discord" }
   - { remote: "flathub", package: "com.github.tchx84.Flatseal" }

@@ -3,6 +3,7 @@
     name:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ release_ver }}.noarch.rpm
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ release_ver }}.noarch.rpm
+    disable_gpg_check: true
     state: present
 
 - name: DNF Update

@@ -8,4 +8,10 @@
   ansible.builtin.dnf:
     name: "{{ item }}"
     state: present
-  loop: "{{ dnf_packages }}"
+  loop: "{{ dnf_installs }}"
+
+- name: Remove Packages
+  ansible.builtin.dnf:
+    name: "{{ item }}"
+    state: absent
+  loop: "{{ dnf_removes }}"
