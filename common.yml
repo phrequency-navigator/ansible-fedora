@@ -1,7 +1,11 @@
 ---
 - name: Common program installation
-  hosts: localhost
-  remote_user: elia
+  hosts: all
   become: yes
   roles:
     - common
+    - rpmfusion
+    - dnf
+    - codecs
+    - flatpak
+

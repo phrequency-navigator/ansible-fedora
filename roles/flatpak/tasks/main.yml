@@ -1,0 +1,7 @@
+- name: install flatpak remotes
+  community.general.flatpak_remote:
+    name: "{{ item.name }}"
+    state: present
+    method: system
+    flatpakrepo_url: "{{ item.url }}"
+  loop: "{{ flatpak_remotes }}"

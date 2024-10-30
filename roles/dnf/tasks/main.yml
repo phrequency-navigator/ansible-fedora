@@ -1,0 +1,11 @@
+- name: Update installed packages
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+    update_cache: yes
+
+- name: Install Packages
+  ansible.builtin.dnf:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ dnf_packages }}"

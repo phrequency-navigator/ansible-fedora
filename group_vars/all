@@ -1,0 +1,29 @@
+release_ver: "41"
+core_ver: "fc41"
+
+username: "" #MY SUDO USER HERE
+
+dnf_packages:
+  - rhythmbox
+  - terminator
+  - git
+  - neovim
+  - ranger
+  - htop
+  - screen
+  - tmux
+  - flatpak
+  - util-linux-user
+  - curl
+  - zsh
+
+flatpak_remotes:
+  - { name: "flathub", url: "https://dl.flathub.org/repo/flathub.flatpakrepo"}
+
+flatpaks:
+  - { remote: "flathub", package: "com.discordapp.Discord" }
+  - { remote: "flathub", package: "com.github.tchx84.Flatseal" }
+  - { remote: "flathub", package: "com.valvesoftware.Steam" }
+  - { remote: "flathub", package: "org.mozilla.firefox" }
+  - { remote: "flathub", package: "io.github.ungoogled_software.ungoogled_chromium" }
+  - { remote: "flathub", package: "org.videolan.VLC" }
