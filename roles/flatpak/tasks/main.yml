@@ -5,3 +5,9 @@
     method: system
     flatpakrepo_url: "{{ item.url }}"
   loop: "{{ flatpak_remotes }}"
+
+- name: install flatpaks
+  community.general.flatpak:
+    name: "{{ item.package }}"
+    remote: "{{ item.remote }}"
+  loop: "{{ flatpaks }}"
