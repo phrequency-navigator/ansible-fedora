@@ -1,3 +1,9 @@
+- name: Update DNF cache
+  ansible.builtin.dnf:
+    name: "*"
+    state: latest
+    update_cache: yes
+
 - name: DNF Swap ffmpeg
   ansible.builtin.command: dnf swap ffmpeg-free ffmpeg --allowerasing
   become: yes

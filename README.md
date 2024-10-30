@@ -25,3 +25,5 @@ Run the playbook
 
     cd fedora-ansible
     ansible-playbook -i hosts --become --ask-become-pass common.yml
+
+NOTE: Your become password is your sudo password
