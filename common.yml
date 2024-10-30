@@ -6,6 +6,6 @@
     - common
     - rpmfusion
     - dnf
-    - codecs
+#    - codecs  # Commented out because this does not need to be run if using flatpaks. Use at your own risk!
     - flatpak
 
