@@ -19,6 +19,7 @@ dnf_installs:
 
 ### List of DNF packages to remove (we remove firefox to avoid duplicates as we install the flatpak)
 dnf_removes:
+  - firefox-langpacks
   - firefox
 
 
