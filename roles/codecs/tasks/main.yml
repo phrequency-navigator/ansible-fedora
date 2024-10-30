@@ -24,3 +24,6 @@
   ansible.builtin.command: dnf swap -y mesa-vdpau-drivers mesa-vdpau-drivers-freeworld 
   become: yes
   become_method: sudo 
+
+- name: DNF Swap mesa-filesystem
+  ansible.builtin.command: dnf swap -y mesa-filesystem

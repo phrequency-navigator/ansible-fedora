@@ -11,3 +11,4 @@
     name: "*"
     state: latest
     update_cache: yes
+    skip_broken: true

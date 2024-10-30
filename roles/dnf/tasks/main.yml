@@ -3,6 +3,7 @@
     name: "*"
     state: latest
     update_cache: yes
+    skip_broken: true
 
 - name: Install Packages
   ansible.builtin.dnf:
