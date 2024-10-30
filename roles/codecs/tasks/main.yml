@@ -7,24 +7,20 @@
 - name: DNF Swap ffmpeg
   ansible.builtin.command: dnf swap ffmpeg-free ffmpeg --allowerasing
   become: yes
-  become_user: root
   become_method: sudo
   
 - name: install additional codecs
   ansible.builtin.command: dnf update @multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
   become: yes
-  become_user: root
   become_method: sudo 
 
 - name: DNF Swap mesa-va-drivers
   ansible.builtin.command: dnf swap mesa-va-drivers mesa-va-drivers-freeworld
   become: yes
-  become_user: root
   become_method: sudo
   
 
 - name: DNF Swap mesa-vdpau-drivers
   ansible.builtin.command: dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld 
   become: yes
-  become_user: root
   become_method: sudo 
