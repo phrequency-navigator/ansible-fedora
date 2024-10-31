@@ -3,7 +3,7 @@
 To clone repo:
 
     sudo dnf install -y git
-    git clone git@github.com:phrequency-navigator/ansible-fedora.git
+    git clone https://github.com/phrequency-navigator/ansible-fedora.git
 
 To install dependancies:
 
